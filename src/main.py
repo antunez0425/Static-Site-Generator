@@ -1,5 +1,6 @@
 from textnode import TextNode, TextType
 from htmlnode import HTMLNode
+from leafnode import LeafNode
 
 
 def main():
@@ -20,7 +21,10 @@ def main():
 
     print(node)
     print(node.props_to_html())
-    print(node.to_html())
+
+    print(LeafNode("p", "This is a paragraph of text.").to_html())
+    print(LeafNode("a", "Click me!", {"href": "https://www.google.com"}).to_html())
+    print(LeafNode(None, "This is a test").to_html())
 
 
 
