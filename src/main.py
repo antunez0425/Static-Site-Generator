@@ -1,12 +1,13 @@
 from textnode import TextNode, TextType
 from htmlnode import HTMLNode
 from leafnode import LeafNode
+from parentnode import ParentNode
 
 
 def main():
-    #text = TextNode("This is a test", TextType.BOLD, "http://www.google.com")
+    text = TextNode("This is a test", TextType.BOLD, "http://www.google.com")
 
-    #print(text)
+    print(text)
 
     node = (HTMLNode
     (
@@ -25,6 +26,10 @@ def main():
     print(LeafNode("p", "This is a paragraph of text.").to_html())
     print(LeafNode("a", "Click me!", {"href": "https://www.google.com"}).to_html())
     print(LeafNode(None, "This is a test").to_html())
+
+
+
+
 
 
 
